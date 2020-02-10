@@ -2,6 +2,11 @@ spring:
   application:
     name: zuul
     
+ #禁止配置中心的配置将客户端配置覆盖掉       
+  cloud:
+    config:
+      override-none: true
+    
 server:
   port: 3001  
    
@@ -32,7 +37,7 @@ ribbon:
   MaxAutoRetriesNextService: 1
   MaxAutoRetries: 1
 
-#设置hystrix的降级的超时时间 
+#设置hystrix的降级的超时时间   
 hystrix:
   command:
    default：
@@ -50,4 +55,4 @@ management:
         
         
         
- #禁止配置中心的配置将客户端配置覆盖掉    
+
