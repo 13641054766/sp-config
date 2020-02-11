@@ -2,16 +2,18 @@ spring:
   application:
     name: item-service
     
- #禁止配置中心的配置将客户端配置覆盖掉    
-  cloud:
-    config:
-      override-none: true
- #连接rabbitmq中心   
+    #连接rabbitmq中心   
     rabbitmq:
       host: 192.168.64.140  
       port: 5672
       username: admin
       password: admin
+    
+ #禁止配置中心的配置将客户端配置覆盖掉    
+  cloud:
+    config:
+      override-none: true
+ 
     
 server:
   port: 8001
